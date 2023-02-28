@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Positioning Properties</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+      :root {
+        --primary-color: #ffea20;
+        --secondary-color: #8dcbe6;
+        --secondary-color-dark: #2035ff;
+        --accent1: #9df1df;
+        --accent2: #e3f6ff;
+
+      }
+      body {
+        background-color:var(--primary-color);
+        font-family: "Ubuntu", sans-serif;
+        text-align: center;
+        letter-spacing: 3px;
+        height: 200vh;
+      }
+      .container{
+        height: 50vh;
+        width: 50%;
+        background-color: var(--secondary-color-dark);
+        margin: 0 auto;
+        border: 10px solid black;
+        color: var(--accent2);
+        /* position: relative; */
+      }
+      /* hindi magagalaw */
+      .box1{
+        background-color: red;
+        position: static;
+      }
+      /* magagalaw mo lang mismo yung tinarget mo */
+      .box2{
+        background-color: green;
+        /* position: relative; */
+        width: 30%;
+      }
+      /*  magagalaw mo sia, makakalabas sia sa parents. Fixed Position kahit i scroll mo*/
+      /* ! important for css mweheheheh */
+      .box3{
+        background-color: blue;
+        position: fixed;
+        top:0;
+      }
+      /* partner for ""postion:relative""" . check container class. nag add akong position relative*/
+      .box4{
+        background-color: cyan;
+        position: absolute;
+        top: 50%;/* for centering always remember*/
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+      }
+      /* combination of  relative & fixed position*/
+      .box5{
+        background-color: pink;
+        position: sticky;
+        top: 50px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS PROPERTIES EXERCISE</h2>
+    <div class="container"> 
+      <div class="box1">BOX1-STATIC</div>
+      <div class="box2">BOX2-RELATIVE</div>
+      <div class="box3">BOX3-FIXED</div>
+      <div class="box4">BOX4-ABSOLUTE</div>
+      <div class="box5">BOX5-STICKY</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem blanditiis beatae nam quos necessitatibus aperiam enim maxime vitae quo, voluptates mollitia? Obcaecati reiciendis nesciunt tenetur laboriosam, illum minima. Nostrum aspernatur vero tempore saepe aliquid? Iusto vitae sunt esse aliquam voluptas at atque maiores facilis nulla consequatur accusamus, libero nemo numquam a mollitia earum non reprehenderit. Amet molestiae illum corrupti consectetur eos ratione rem expedita numquam animi repudiandae nulla perspiciatis natus cupiditate quaerat illo sapiente mollitia, distinctio quia. Molestias enim beatae repellendus eum id! Eos ipsum expedita nam maiores laboriosam, quibusdam aut mollitia deleniti nostrum, unde eius cumque sint doloribus quaerat.</p>
+  </body>
+</html>
